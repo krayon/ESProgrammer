@@ -1,14 +1,14 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.3-rc7-stable)
 
   (general
-    (links 64)
+    (links 66)
     (no_connects 0)
     (area 158.924999 87.424999 204.075001 108.075001)
     (thickness 1.6)
     (drawings 35)
     (tracks 217)
     (zones 0)
-    (modules 30)
+    (modules 32)
     (nets 37)
   )
 
@@ -173,8 +173,32 @@
     (add_net TXD)
   )
 
+  (module Wire_Connections_Bridges:small_via (layer F.Cu) (tedit 577B0D43) (tstamp 57865866)
+    (at 202.2 105.5)
+    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value SolderWirePad_single_0-8mmDrill (at 0 2.54) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 0.6 0.6) (drill 0.4) (layers *.Cu)
+      (net 2 GND) (zone_connect 2))
+  )
+
+  (module Wire_Connections_Bridges:small_via (layer F.Cu) (tedit 577B0D43) (tstamp 578657E9)
+    (at 173.6 98.05)
+    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value SolderWirePad_single_0-8mmDrill (at 0 2.54) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (pad 1 thru_hole circle (at 0 0) (size 0.6 0.6) (drill 0.4) (layers *.Cu)
+      (net 2 GND) (zone_connect 2))
+  )
+
   (module Wire_Connections_Bridges:small_via (layer F.Cu) (tedit 577B0D43) (tstamp 5786579E)
-    (at 166.2 94.9)
+    (at 166.3 94.6)
     (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -1020,7 +1044,7 @@
   )
 
   (module Wire_Connections_Bridges:small_via (layer F.Cu) (tedit 577B0D99) (tstamp 57865542)
-    (at 173.6 101.2)
+    (at 173.6 100.15)
     (zone_connect 2)
     (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
