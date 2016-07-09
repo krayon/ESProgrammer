@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:esd
 LIBS:cp2102
+LIBS:esprogrammer-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -210,50 +211,6 @@ F 3 "" H 2100 4700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MMBT3904 Q2
-U 1 1 5758FD7F
-P 4800 5100
-F 0 "Q2" H 4993 5008 50  0000 L CNN
-F 1 "MMBT3904" H 4993 5100 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 4993 5192 50  0000 L CIN
-F 3 "" H 4800 5100 50  0000 L CNN
-	1    4800 5100
-	1    0    0    1   
-$EndComp
-$Comp
-L MMBT3904 Q1
-U 1 1 5758FDE9
-P 4800 4500
-F 0 "Q1" H 4993 4592 50  0000 L CNN
-F 1 "MMBT3904" H 4993 4500 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 4993 4408 50  0000 L CIN
-F 3 "" H 4800 4500 50  0000 L CNN
-	1    4800 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L R_Small R2
-U 1 1 5758FE3E
-P 4300 4500
-F 0 "R2" V 4103 4500 50  0000 C CNN
-F 1 "10k" V 4195 4500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" H 4300 4500 50  0001 C CNN
-F 3 "" H 4300 4500 50  0000 C CNN
-	1    4300 4500
-	0    1    1    0   
-$EndComp
-$Comp
-L R_Small R3
-U 1 1 5758FEE0
-P 4300 5100
-F 0 "R3" V 4103 5100 50  0000 C CNN
-F 1 "10k" V 4195 5100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" H 4300 5100 50  0001 C CNN
-F 3 "" H 4300 5100 50  0000 C CNN
-	1    4300 5100
-	0    1    1    0   
-$EndComp
-$Comp
 L CONN_02X03 P2
 U 1 1 57658F87
 P 2950 5200
@@ -270,9 +227,9 @@ Text GLabel 5900 2200 2    39   Input ~ 0
 TXD
 Text GLabel 5900 2300 2    39   Input ~ 0
 RXD
-Text GLabel 4000 4500 0    39   Input ~ 0
+Text GLabel 4900 5300 0    39   Input ~ 0
 DTR
-Text GLabel 4000 5100 0    39   Input ~ 0
+Text GLabel 4900 4300 0    39   Input ~ 0
 RTS
 Text GLabel 5500 4300 2    39   Input ~ 0
 ESP_RST
@@ -479,24 +436,6 @@ NoConn ~ 4900 3400
 NoConn ~ 5000 3400
 NoConn ~ 5100 3400
 Wire Wire Line
-	4400 4500 4600 4500
-Wire Wire Line
-	4400 5100 4600 5100
-Wire Wire Line
-	4000 4500 4200 4500
-Wire Wire Line
-	4000 5100 4200 5100
-Wire Wire Line
-	4900 4900 4100 4900
-Wire Wire Line
-	4100 4900 4100 4500
-Connection ~ 4100 4500
-Wire Wire Line
-	4900 4700 4150 4700
-Wire Wire Line
-	4150 4700 4150 5100
-Connection ~ 4150 5100
-Wire Wire Line
 	4900 4300 5500 4300
 Wire Wire Line
 	4900 5300 5550 5300
@@ -505,13 +444,19 @@ Wire Wire Line
 Wire Wire Line
 	800  1550 800  2250
 Wire Wire Line
-	650  2250 1550 2250
+	650  2250 800  2250
 Wire Wire Line
-	900  1200 900  2400
+	800  2250 1550 2250
+Wire Wire Line
+	900  1200 900  1900
+Wire Wire Line
+	900  1900 900  2400
 Wire Wire Line
 	900  1900 1550 1900
 Wire Wire Line
-	1000 1200 1000 2400
+	1000 1200 1000 1550
+Wire Wire Line
+	1000 1550 1000 2400
 Wire Wire Line
 	1000 1550 1550 1550
 Connection ~ 1000 1550
@@ -561,7 +506,9 @@ NoConn ~ 5900 2600
 NoConn ~ 5900 2700
 NoConn ~ 5900 2100
 Wire Wire Line
-	5000 1500 5200 1500
+	5000 1500 5100 1500
+Wire Wire Line
+	5100 1500 5200 1500
 Connection ~ 5100 1500
 $Comp
 L +3.3V #PWR020
@@ -630,14 +577,26 @@ F 3 "" H 6700 1100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 1000 6700 1000
+	5550 1000 5950 1000
+Wire Wire Line
+	5950 1000 6150 1000
+Wire Wire Line
+	6150 1000 6300 1000
+Wire Wire Line
+	6300 1000 6700 1000
 Connection ~ 5950 1000
 Connection ~ 6300 1000
 Wire Wire Line
 	6150 950  6150 1000
 Connection ~ 6150 1000
 Wire Wire Line
-	5550 1200 6700 1200
+	5550 1200 5950 1200
+Wire Wire Line
+	5950 1200 6150 1200
+Wire Wire Line
+	6150 1200 6300 1200
+Wire Wire Line
+	6300 1200 6700 1200
 Connection ~ 5950 1200
 Connection ~ 6300 1200
 Wire Wire Line
